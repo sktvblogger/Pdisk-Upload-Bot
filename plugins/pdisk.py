@@ -21,10 +21,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.regex('http') & filters.private)
 async def pdisk(bot, message):
         text = message.text
-        if 'cofilink.com' in text or 'www.cofilink.com' in text or 'pdisk.me' in text or 'www.pdisk.me' in text:
-            spl = link.split('=')
+        if 'cofilink.com' in text or 'www.cofilink.com' in text or 'pdisk.pro' in text or 'www.pdisk.me' in text:
+            spl = link.split('/')
             vd_id = spl[-1]
-            auth = "http://linkapi.net/open/clone_item/?api_key="+Config.API_KEY+"&item_id="+vd_id
+            auth = "https://pdisk.pro/api/file/clone?file_code="+vd_id&key="+Config.API_KEY+"
         else:
             try:
             # Solved https://github.com/HeimanPictures/Pdisk-Upload-Bot/issues/1#issue-1018422275
