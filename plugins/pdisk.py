@@ -15,15 +15,15 @@ from config import Config
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from pyrogram import Client, filters, enums
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.regex('http') & filters.private)
 async def pdisk(bot, message):
-        pattern = re.compile(r"(.+)/(.+)")
-        matches = re.findall(pattern, message.text)
-            vd_id = match[1]
-            vd_ids = match[0]
+        text = message.text
+        if 'cofilink.com' in text or 'www.cofilink.com' in text or 'pdisk.me' in text or 'www.pdisk.me' in text:
+            spl = link.split('=')
+            vd_id = spl[-1]
             auth = "https://pdisk.pro/api/file/clone?file_code="+vd_id+"&key="+Config.API_KEY+""
         else:
             try:
