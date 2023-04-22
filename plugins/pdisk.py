@@ -43,7 +43,7 @@ async def pdisk(bot, message):
             r = requests.get(auth,headers)
             res = r.json()
             #print(res)
-            id = res["msg"]["file_code"]
+            id = res["file_code"]
             await message.reply_chat_action("typing")
             pdisk = "https://pdisk.pro/"+id      
             await message.reply_photo(
