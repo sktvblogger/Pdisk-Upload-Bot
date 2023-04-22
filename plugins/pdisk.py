@@ -33,19 +33,19 @@ async def pdisk(bot, message):
                 title = spl[1]
                 try:
                     thumb = spl[2]
-                    auth = "http://linkapi.net/open/create_item/?api_key="+Config.API_KEY+"&content_src="+url+"&link_type=link"+"&title="+title+"&cover_url="+thumb 
+                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0 
                 except Exception:
-                    auth = "http://linkapi.net/open/create_item/?api_key="+Config.API_KEY+"&content_src="+url+"&link_type=link"+"&title="+title
+                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0
             except Exception:
                 url = text
-                auth = "http://linkapi.net/open/create_item/?api_key="+Config.API_KEY+"&content_src="+url+"&link_type=link"+"&title=None"
+                auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0"
             headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
             r = requests.get(auth,headers)
             res = r.json()
             #print(res)
-            id = res["data"]["item_id"]
+            id = res["data"]["file_code"]
             await message.reply_chat_action("typing")
-            pdisk = "https://cofilink.com/share-video?videoid="+id      
+            pdisk = "https://pdisk.pro/"+id      
             await message.reply_photo(
                 photo="https://static10.tgstat.ru/channels/_0/f3/f3218a8a0d195d12e73f6b69e51bbb4f.jpg",
                 caption="**URL:** `"+pdisk+"`\n\n**The PDisk Link Is Below The Provided Link Will Be Uploaded in few minutes.\nThank You**\n\n**@HeimanSupports**",
