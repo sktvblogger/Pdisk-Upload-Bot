@@ -24,7 +24,7 @@ async def pdisk(bot, message):
         if 'cofilink.com' in text or 'www.cofilink.com' in text or 'pdisk.pro' in text or 'www.pdisk.me' in text:
             spl = link.split('/')
             vd_id = spl[-1]
-            auth = "https://pdisk.pro/api/file/clone?file_code="+vd_id&key="+Config.API_KEY+"
+            auth = "https://pdisk.pro/api/file/clone?file_code="+vd_id"&key="+Config.API_KEY+
         else:
             try:
             # Solved https://github.com/HeimanPictures/Pdisk-Upload-Bot/issues/1#issue-1018422275
