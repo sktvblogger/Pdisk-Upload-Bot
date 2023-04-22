@@ -33,9 +33,9 @@ async def pdisk(bot, message):
                 title = spl[1]
                 try:
                     thumb = spl[2]
-                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0
+                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0"
                 except Exception:
-                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0
+                    auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0"
             except Exception:
                 url = text
                 auth = "https://pdisk.pro/api/upload/url?key="+Config.API_KEY+"&url="+url+"&fld_id=0"
