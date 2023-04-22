@@ -7,7 +7,7 @@ class Config(object):
 
     API_HASH = os.environ.get("API_HASH", "08ad181fba3b05e1141db96175cab60e")
     
-    API_KEY = os.environ.get("API_KEY", "99xz8zhn3shdv021ws'")
+    API_KEY = os.environ.get("API_KEY", "847yfgv1x2aurspiqj3")
 
     # AUTH_USERS = set(str(x) for x in os.environ.get("AUTH_USERS", "").split())
 
